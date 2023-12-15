@@ -1,5 +1,5 @@
 
-# Java: Un Viaggio Dal Linguaggio alla Piattaforma
+# `Java: Un Viaggio Dal Linguaggio alla Piattaforma`
 
 ## Introduzione: Il Mondo di Java
 Java non è soltanto un linguaggio di programmazione; è una filosofia, un ecosistema, una fondamentale costellazione nel vasto universo del software. La sua nascita, maturata nell'era digitale degli anni '90, ha segnato un punto di svolta nella programmazione, introducendo concetti rivoluzionari che hanno riscritto le regole del gioco.
