@@ -1,5 +1,7 @@
 [Back to Summary](../Summary.md)
 
+# `Compilazione ed Esecuzione`
+
 ## Introduzione
 Questa documentazione copre l'uso dei comandi `javac` e `java` in Java, spiegando il processo di compilazione, esecuzione e l'importanza di ricompilare dopo aver apportato modifiche al codice.
 

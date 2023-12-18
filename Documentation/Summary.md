@@ -10,7 +10,11 @@
 
 [`06` Uso_delle_Variabili_in_Java](./Module-1/06-%20Uso_delle_Variabili_in_Java.md)
 
-[`07` 06- Uso_delle_Variabili_in_Java](./Module-1/07-%20Aggiornamento_Variabili_Java.md)
+[`07` Aggiornamento_Variabili_Java](./Module-1/07-%20Aggiornamento_Variabili_Java.md)
+
+[`08` Manipolazione_e_Concatenazione_delle_Stringhe_in_Java.md](./Module-1/08-%20Manipolazione_e_Concatenazione_delle_Stringhe_in_Java.md.md)
+
+[`09` Aggiornamento_Variabili_Java](./Module-1/09-%20Convenzioni_Denominazione_e_Tipi_Dati_in_Java.md)
 
 
 
