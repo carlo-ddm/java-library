@@ -8,6 +8,10 @@
 
 [`05` Inlay_Hints_Nel_Codice](./Module-1/05-%20Inlay_Hints_Nel_Codice.md)
 
+[`06` Uso_delle_Variabili_in_Java](./Module-1/06-%20Uso_delle_Variabili_in_Java.md)
+
+[`07` 06- Uso_delle_Variabili_in_Java](./Module-1/07-%20Aggiornamento_Variabili_Java.md)
+
 
 
 
