@@ -1,6 +1,6 @@
 [Back to Summary](../Summary.md)
 
-# `Aggiornamento delle Variabili in Java`
+# Aggiornamento delle Variabili in Java
 
 ## Introduzione
 In questa documentazione, esaminiamo il concetto di variabili in Java, concentrandoci sull'aggiornamento dei loro valori, come illustrato nella trascrizione e nel codice sorgente `Bus.java` forniti.

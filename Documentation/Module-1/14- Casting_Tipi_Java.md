@@ -1,3 +1,5 @@
+[Back to Summary](../Summary.md)
+
 # Casting dei Tipi in Java
 
 ## Introduzione

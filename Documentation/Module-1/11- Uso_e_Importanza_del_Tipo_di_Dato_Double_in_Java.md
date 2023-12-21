@@ -1,4 +1,6 @@
-# `Uso e Importanza del Tipo di Dato Double in Java`
+[Back to Summary](../Summary.md)
+
+# Uso e Importanza del Tipo di Dato Double in Java
 
 ## Introduzione al Tipo di Dato `double`
 Il tipo di dato `double` in Java è fondamentale per la gestione di numeri con precisione decimale. A differenza di tipi interi come `int`, `double` permette di rappresentare numeri con cifre dopo il punto decimale, essenziale per calcoli matematici accurati e rappresentazioni di dati realistici.

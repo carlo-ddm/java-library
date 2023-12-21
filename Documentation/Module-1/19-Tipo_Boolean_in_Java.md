@@ -1,3 +1,5 @@
+[Back to Summary](../Summary.md)
+
 # Il Tipo di Dato Boolean in Java
 
 ## Introduzione

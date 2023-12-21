@@ -1,6 +1,6 @@
 [Back to Summary](../Summary.md)
 
-# `Inlay Hints nel Codice`
+# Inlay Hints nel Codice
 
 ## Introduzione
 Gli inlay hints sono una caratteristica innovativa negli ambienti di sviluppo integrati (IDE) e editor di testo, progettata per migliorare la leggibilità e la comprensione del codice sorgente. Questa documentazione esplora cosa sono gli inlay hints e perché sono considerati utili nel mondo della programmazione.

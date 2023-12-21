@@ -1,6 +1,6 @@
 [Back to Summary](../Summary.md)
 
-# `Installazione di Amazon Corretto JDK 17`
+# Installazione di Amazon Corretto JDK 17
 
 ## Guida all'Installazione di Java tramite Amazon Corretto JDK 17
 

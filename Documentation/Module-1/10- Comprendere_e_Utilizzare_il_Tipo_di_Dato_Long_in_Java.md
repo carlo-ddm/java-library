@@ -1,4 +1,6 @@
-# `Comprendere e Utilizzare il Tipo di Dato Long in Java`
+[Back to Summary](../Summary.md)
+
+# Comprendere e Utilizzare il Tipo di Dato Long in Java
 
 ## Introduzione al Tipo di Dato `long`
 In Java, il tipo di dato `long` è essenziale per memorizzare numeri interi di grandi dimensioni. A differenza del tipo `int`, che è limitato a quattro byte in memoria, `long` ha otto byte, permettendo di gestire valori fino a 9 quintilioni. Questa capacità lo rende ideale per situazioni in cui ci si aspetta di gestire numeri che superano i limiti di `int`.

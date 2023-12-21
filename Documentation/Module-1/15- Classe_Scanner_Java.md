@@ -1,3 +1,5 @@
+[Back to Summary](../Summary.md)
+
 # Documentazione sulla Classe Scanner in Java
 
 ## Introduzione

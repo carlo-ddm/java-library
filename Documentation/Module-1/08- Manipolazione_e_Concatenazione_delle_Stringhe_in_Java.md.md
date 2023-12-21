@@ -1,7 +1,7 @@
 
 [Back to Summary](../Summary.md)
 
-# `Manipolazione e Concatenazione delle Stringhe in Java`
+# Manipolazione e Concatenazione delle Stringhe in Java
 
 ## Introduzione
 In Java, il tipo di dato `String` è utilizzato per immagazzinare testo. A differenza di tipi di dati come `int`, che occupano una quantità fissa di memoria (tipicamente quattro byte), le stringhe occupano una quantità di memoria che varia in base al loro contenuto. Questa caratteristica rende le stringhe un elemento dinamico e flessibile nella programmazione Java.

@@ -1,10 +1,9 @@
-# La Trappola del NextLine in Java
+[Back to Summary](../Summary.md)
 
+# La Trappola del NextLine in Java
 
 ## Introduzione
 Nell'utilizzo della classe `Scanner` in Java, si incontra spesso un problema comune: la "trappola del nextLine". Questa problematica si verifica quando `nextLine()` viene usato dopo metodi come `nextInt()` o `nextDouble()`, portando a comportamenti inaspettati e spesso frustranti.
-
-
 
 ## Esempio Pratico
 Il seguente codice dimostra il problema e come può essere risolto. Esso legge vari tipi di input dall'utente, mostrando dove e come si manifesta la "trappola del nextLine".
@@ -78,12 +77,8 @@ public class NextLineTrap {
 
 ```
 
-
-
 ## Spiegazione del Problema
 Il problema nasce dal modo in cui i metodi come `nextInt()` e `nextDouble()` del `Scanner` gestiscono il carattere di fine riga (Invio). Questi metodi non consumano il carattere di fine riga, lasciandolo nel buffer di input, il quale viene poi immediatamente letto da `nextLine()`, causando comportamenti inaspettati.
-
-
 
 ## La Soluzione al Problema
 La soluzione consiste nell'aggiungere un `nextLine()` subito dopo metodi come `nextInt()` e `nextDouble()` per consumare il carattere di fine riga, prima di leggere la prossima stringa con un altro `nextLine()`.

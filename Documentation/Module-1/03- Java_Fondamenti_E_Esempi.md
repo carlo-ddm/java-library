@@ -1,6 +1,6 @@
 [Back to Summary](../Summary.md)
 
-# `Java: Fondamenti ed Esempi`
+# Java: Fondamenti ed Esempi
 
 ## Introduzione
 

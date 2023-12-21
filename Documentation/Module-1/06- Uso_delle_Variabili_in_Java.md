@@ -1,6 +1,6 @@
 [Back to Summary](../Summary.md)
 
-# `Uso delle Variabili in Java`
+# Uso delle Variabili in Java
 
 ## Introduzione
 In questa documentazione, esploriamo l'uso delle variabili in Java, come descritto nella trascrizione fornita. Le variabili sono fondamentali in Java per immagazzinare e manipolare i dati. Tratteremo vari tipi di dati, tra cui interi, lunghezze maggiori, decimali, testi e caratteri, con esempi pratici tratti dal codice sorgente allegato.

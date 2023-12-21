@@ -1,4 +1,6 @@
-# `Controllo dei Decimali nei Valori Double in Java`
+[Back to Summary](../Summary.md)
+
+# Controllo dei Decimali nei Valori Double in Java
 
 ## Introduzione
 In Java, la gestione della precisione dei valori `double` è un aspetto cruciale in molte applicazioni, specialmente quelle che richiedono calcoli matematici precisi. Esaminiamo diverse tecniche per controllare il numero di cifre decimali in un valore `double`.

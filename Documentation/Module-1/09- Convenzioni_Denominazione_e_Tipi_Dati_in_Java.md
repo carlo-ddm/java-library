@@ -1,7 +1,7 @@
 
 [Back to Summary](../Summary.md)
 
-# `Convenzioni di Denominazione e Uso dei Tipi di Dati in Java`
+# Convenzioni di Denominazione e Uso dei Tipi di Dati in Java
 
 ## Introduzione
 La scelta del tipo di dato appropriato e l'adozione di convenzioni di denominazione sono fondamentali nella programmazione Java. La trascrizione sottolinea l'uso del camel case per la denominazione delle variabili e discute la selezione del tipo di dato `String` per immagazzinare testo.
