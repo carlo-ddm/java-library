@@ -1,4 +1,4 @@
-# Documentazione sul Casting dei Tipi in Java
+# Casting dei Tipi in Java
 
 ## Introduzione
 Il casting dei tipi è un concetto fondamentale in Java, utilizzato per convertire una variabile da un tipo di dato ad un altro. In Java, ci sono due tipi di casting: implicito (widening) e esplicito (narrowing).
