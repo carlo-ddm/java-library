@@ -1,6 +1,5 @@
 # Debugging in Java: Tecniche e Strategie
 
-
 ## Introduzione
 Il debugging è un'arte tanto quanto una scienza in programmazione. In Java, come in ogni linguaggio di programmazione, il debugging è cruciale per identificare e correggere gli errori (bug) nel codice. In questa documentazione, esploreremo diverse tecniche e strategie di debugging, utilizzando un esempio pratico per illustrare questi concetti.
 
