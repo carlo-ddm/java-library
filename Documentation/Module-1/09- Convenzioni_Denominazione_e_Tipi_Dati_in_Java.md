@@ -1,4 +1,3 @@
-
 [Back to Summary](../Summary.md)
 
 # Convenzioni di Denominazione e Uso dei Tipi di Dati in Java
