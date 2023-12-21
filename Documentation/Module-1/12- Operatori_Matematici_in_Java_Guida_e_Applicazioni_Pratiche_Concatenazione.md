@@ -40,6 +40,3 @@ Utilizzando i file `MathOperations.java` e `Bus.java`, vediamo come questi opera
 
 ## Conclusioni
 Comprendere gli operatori matematici in Java è fondamentale per la realizzazione di software efficiente. La corretta applicazione di questi operatori, specialmente in contesti di concatenazione di stringhe, è essenziale per evitare errori di logica e garantire risultati accurati.
-
----
-Documentazione creata da Java Tutor.

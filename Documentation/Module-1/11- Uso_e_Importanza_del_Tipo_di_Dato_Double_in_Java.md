@@ -27,6 +27,3 @@ Oltre agli esempi forniti nel codice, `double` è ampiamente utilizzato in appli
 
 ## Conclusioni
 Capire quando e come utilizzare il tipo di dato `double` è essenziale per lo sviluppo di software che richiede precisione nei calcoli. La sua capacità di gestire numeri decimali lo rende uno strumento prezioso per qualsiasi programmatore Java.
-
----
-Documentazione creata da Java Tutor.
