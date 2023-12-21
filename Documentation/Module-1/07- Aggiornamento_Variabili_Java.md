@@ -1,4 +1,3 @@
-
 [Back to Summary](../Summary.md)
 
 # `Aggiornamento delle Variabili in Java`
