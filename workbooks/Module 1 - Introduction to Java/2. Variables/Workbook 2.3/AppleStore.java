@@ -28,7 +28,7 @@ public class AppleStore {
         numOfApples -= 200;
 
         profit += price * (500 - numOfApples);
-        DecimalFormat df = new DecimalFormat("#.##");
+        DecimalFormat df = new DecimalFormat("#.#");
 
 
         System.out.println("Wow! So far, you made: $ " + df.format(profit));
@@ -36,6 +36,5 @@ public class AppleStore {
         System.out.println("You have " + numOfApples + " apples left.");
 
         // Compare your result to what's on Learn the Part.
-
     }
 }
