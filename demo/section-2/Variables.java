@@ -8,5 +8,7 @@ public class Variables {
 
         int maxValue = 2147483647;
         // int maxValues = 2147483648;
+
+        System.out.println(maxValue);
     }
 }
