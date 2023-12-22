@@ -1,4 +1,3 @@
-
 # Java-OOP-Compendium
 
 ## Introduzione alla Programmazione Orientata agli Oggetti (OOP)
@@ -25,9 +24,6 @@ nissan.color = "Green";
 
 ### Importanza di `private` e Uso di Getter e Setter:
 Per mantenere il codice sicuro e ben incapsulato, le proprietà degli oggetti dovrebbero essere `private`, con accesso controllato tramite metodi `getter` e `setter`.
-
----
-
 
 ## Costruttori e Costruttori Copia in Java
 
@@ -64,9 +60,6 @@ public Car(Car source){
 - **Unicità dell'Oggetto**: Il costruttore copia è essenziale per creare una nuova istanza con lo stesso stato di un oggetto esistente ma con una referenza diversa.
 - **Controllo sulla Clonazione**: Fornisce un controllo esplicito su come gli oggetti vengono clonati.
 
----
-
-
 ## Metodi e Esecuzione di Compiti in Java
 
 In Java, i metodi sono azioni che gli oggetti possono eseguire. Sono definiti all'interno delle classi e possono essere utilizzati per modificare lo stato interno dell'oggetto o interagire con altri oggetti.
@@ -91,9 +84,6 @@ myCar.drive();  // Chiamata del metodo drive
 ```
 
 I metodi possono anche ritornare valori e ricevere parametri per eseguire operazioni più complesse e interattive.
-
----
-
 
 ## Gestione degli Array e Oggetti Mutabili in Java
 
@@ -125,9 +115,6 @@ public Car(Car source) {
 }
 ```
 
----
-
-
 ## Sovrascrittura del Metodo toString in Java
 
 In Java, ogni classe eredita un metodo `toString()` dalla classe `Object`. Questo metodo è spesso sovrascritto per fornire una rappresentazione stringa più informativa dell'oggetto.
@@ -152,9 +139,6 @@ public String toString() {
 ```
 
 In questo esempio, `toString()` è stato sovrascritto nella classe `Car` per restituire una stringa che descrive lo stato dell'oggetto Car.
-
----
-
 
 ## Classi Contenitive e Gestione delle Proprietà in Java
 
@@ -189,9 +173,6 @@ public Dealership(Car[] cars) {
 }
 ```
 
----
-
-
 ## Tipi di Dati in Java
 
 Java supporta due categorie principali di tipi di dati: primitivi e oggetti (o tipi di riferimento). La comprensione di queste categorie è fondamentale per la programmazione efficace in Java.
@@ -214,9 +195,6 @@ I tipi oggetto (o tipi di riferimento) includono classi, interfacce e array. Gli
 
 ### Importanza dei Tipi di Dati:
 La scelta tra tipi primitivi e oggetti dipende dalle esigenze specifiche del programma, considerando efficienza, facilità di utilizzo e altre caratteristiche.
-
----
-
 
 ## Collezioni e Liste in Java
 
@@ -241,10 +219,6 @@ Le liste sono parte dell'interfaccia `List` in Java, che fornisce metodi per man
 
 ### Importanza delle Collezioni:
 Le collezioni in Java forniscono un modo flessibile e potente per lavorare con gruppi di oggetti. Sono fondamentali per la gestione di dati dinamici e strutture di dati complesse.
-
----
-
-Progresso: 8/20 (40% completato)
 
 ## Override dei Metodi equals e hashCode in Java
 
@@ -282,10 +256,6 @@ public int hashCode() {
 
 Override appropriati di `equals()` e `hashCode()` garantiscono che gli oggetti possano essere confrontati e gestiti in modo efficace nelle collezioni.
 
----
-
-Progresso: 9/20 (45% completato)
-
 ## Gestione delle Eccezioni in Java
 
 La gestione delle eccezioni è un aspetto cruciale della programmazione in Java. Le eccezioni sono eventi che interrompono il normale flusso di esecuzione di un programma e devono essere gestite adeguatamente per mantenere la stabilità dell'applicazione.
@@ -318,10 +288,6 @@ finally {
 
 La corretta gestione delle eccezioni assicura che il programma possa gestire situazioni impreviste senza arrestarsi bruscamente.
 
----
-
-Progresso: 10/20 (50% completato)
-
 ## Validazione degli Argomenti in Java
 
 La validazione degli argomenti è una pratica essenziale in Java per garantire che i metodi ricevano dati corretti e per prevenire errori o comportamenti inattesi.
@@ -349,10 +315,6 @@ public void setUsername(String username) {
 
 Questi esempi dimostrano come validare gli argomenti prima di assegnarli a campi di un oggetto, lanciando eccezioni appropriate se necessario.
 
----
-
-Progresso: 11/20 (55% completato)
-
 ## Uso delle Mappe in Java
 
 Le mappe in Java sono strutture di dati che memorizzano coppie di chiavi-valori. Sono utili per l'accesso rapido ai dati tramite chiavi uniche.
@@ -375,10 +337,6 @@ treeMap.put("Diana", 28);
 ### Importanza delle Mappe:
 Le mappe sono essenziali per la memorizzazione e la ricerca efficiente di dati basati su chiavi. Sono ampiamente utilizzate per vari casi d'uso in Java, da semplici cache a strutture di dati complesse.
 
----
-
-Progresso: 12/20 (60% completato)
-
 ## Pacchetti e Import in Java
 
 I pacchetti in Java sono utilizzati per organizzare le classi e le interfacce in gruppi logicamente correlati, facilitando la gestione del codice in applicazioni di grandi dimensioni.
@@ -400,6 +358,190 @@ import static java.lang.Math.PI;
 
 Questi esempi mostrano come importare classi e metodi statici, rendendoli accessibili nel file corrente.
 
----
+## Campi e Metodi Statici in Java
 
-Progresso: 13/20 (65% completato)
+In Java, i membri statici (campi e metodi) appartengono alla classe piuttosto che a qualsiasi istanza specifica. Questo li rende utili per rappresentare valori o comportamenti che sono comuni a tutte le istanze della classe.
+
+### Campi Statici:
+- **Condivisi da Tutte le Istanze**: Un campo statico ha lo stesso valore per tutte le istanze della classe.
+- **Esempio di Campo Statico**:
+  ```java
+  public static final int MIN_AGE = 18;
+  ```
+
+### Metodi Statici:
+- **Accesso Senza Istanza**: Un metodo statico può essere chiamato senza creare un'istanza della classe.
+- **Esempio di Metodo Statico**:
+  ```java
+  public static int calculateAge(int birthYear) {
+      return CURRENT_YEAR - birthYear;
+  }
+  ```
+
+### Importanza dei Membri Statici:
+I membri statici sono usati per rappresentare proprietà e comportamenti che sono generali alla classe intera, come costanti (campi `final static`) o metodi di utilità.
+
+## Campi e Metodi Statici in Java
+
+In Java, i membri statici (campi e metodi) appartengono alla classe piuttosto che a qualsiasi istanza specifica. Questo li rende utili per rappresentare valori o comportamenti che sono comuni a tutte le istanze della classe.
+
+### Campi Statici:
+- **Condivisi da Tutte le Istanze**: Un campo statico ha lo stesso valore per tutte le istanze della classe.
+- **Esempio di Campo Statico**:
+  ```java
+  public static final int MIN_AGE = 18;
+  ```
+
+### Metodi Statici:
+- **Accesso Senza Istanza**: Un metodo statico può essere chiamato senza creare un'istanza della classe.
+- **Esempio di Metodo Statico**:
+  ```java
+  public static int calculateAge(int birthYear) {
+      return CURRENT_YEAR - birthYear;
+  }
+  ```
+
+### Importanza dei Membri Statici:
+I membri statici sono usati per rappresentare proprietà e comportamenti che sono generali alla classe intera, come costanti (campi `final static`) o metodi di utilità.
+
+## Enums in Java
+
+Gli `enum` in Java sono tipi di dati speciali che consentono di definire un insieme fisso di costanti. Sono utili per rappresentare un gruppo di valori costanti (come i giorni della settimana, i mesi, le direzioni ecc.) in modo più sicuro e conveniente.
+
+### Definizione di un Enum:
+```java
+public enum Day {
+    MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY
+}
+```
+
+### Utilizzo degli Enum:
+Gli enum possono essere utilizzati per creare variabili che possono assumere solo uno dei valori predefiniti, aumentando la leggibilità e la sicurezza del codice.
+
+### Esempio di Utilizzo di Enum:
+```java
+Day today = Day.MONDAY;
+```
+
+Gli `enum` sono particolarmente utili in switch case e per il controllo dei valori ammessi, riducendo gli errori di codifica.
+
+## Ereditarietà e Polimorfismo in Java
+
+L'ereditarietà e il polimorfismo sono due concetti fondamentali nella programmazione orientata agli oggetti in Java, che permettono di creare gerarchie di classi e di utilizzare oggetti in modo più flessibile.
+
+### Ereditarietà:
+- **Definizione**: L'ereditarietà consente a una classe di ereditare proprietà e metodi da un'altra classe (genitore).
+- **Keyword `extends`**: Utilizzata per dichiarare l'ereditarietà.
+- **Esempio**:
+  ```java
+  public class Car extends Vehicle {
+      // Codice specifico della classe Car
+  }
+  ```
+
+### Polimorfismo:
+- **Definizione**: Il polimorfismo consente agli oggetti di essere trattati come istanze di classi genitore o interfacce.
+- **Esempio di Utilizzo**:
+  ```java
+  Vehicle myCar = new Car();
+  ```
+- **Benefici**: Il polimorfismo aumenta la flessibilità e la modularità del codice.
+
+L'ereditarietà e il polimorfismo sono fondamentali per creare codice riutilizzabile e facilmente manutenibile.
+
+## Classi Astratte e Metodi Astratti in Java
+
+Le classi astratte e i metodi astratti in Java sono utilizzati per creare modelli di base che altre classi possono estendere e implementare. Questi concetti sono fondamentali per fornire una struttura coerente in applicazioni complesse.
+
+### Classi Astratte:
+- **Definizione**: Una classe astratta non può essere istanziata direttamente e può contenere metodi astratti e concreti.
+- **Keyword `abstract`**: Utilizzata per dichiarare una classe astratta.
+- **Esempio**:
+  ```java
+  public abstract class Shape {
+      public abstract double area();
+      public abstract double perimeter();
+  }
+  ```
+
+### Metodi Astratti:
+- **Definizione**: Un metodo astratto è un metodo senza implementazione, che deve essere sovrascritto dalle classi derivate.
+- **Esempio di Metodo Astratto**:
+  ```java
+  public abstract double area();
+  ```
+
+L'uso di classi astratte e metodi astratti permette di definire un'interfaccia standard mentre si lascia l'implementazione specifica alle classi figlie.
+
+## Funzioni Lambda e Interfacce Funzionali in Java
+
+Le funzioni lambda e le interfacce funzionali in Java sono una parte fondamentale della programmazione funzionale, permettendo di scrivere codice più conciso e flessibile.
+
+### Funzioni Lambda:
+- **Definizione**: Una funzione lambda è una funzione anonima (senza nome) che può essere utilizzata per implementare metodi definiti con un'interfaccia funzionale.
+- **Sintassi**:
+  ```java
+  (parametri) -> { corpo }
+  ```
+- **Esempio**:
+  ```java
+  Arrays.sort(words, (s1, s2) -> s1.length() - s2.length());
+  ```
+
+### Interfacce Funzionali:
+- **Definizione**: Un'interfaccia funzionale è un'interfaccia che contiene un solo metodo astratto (ad esempio, `Runnable`, `Callable`, `Comparator`).
+- **Utilizzo con Lambda**:
+  Le interfacce funzionali possono essere implementate in modo conciso utilizzando espressioni lambda.
+
+Le funzioni lambda e le interfacce funzionali rendono più facile e meno verbosa l'implementazione di comportamenti parametrizzati e operazioni su collezioni.
+
+## Interfacce e Design Multistrato in Java
+
+Le interfacce in Java sono strumenti potenti per realizzare un design software flessibile e multistrato, facilitando l'implementazione di principi di programmazione come l'inversione di dipendenza e la separazione delle preoccupazioni.
+
+### Interfacce in Java:
+- **Definizione**: Un'interfaccia è un tipo di riferimento in Java, che può contenere solo costanti, firme di metodi, metodi default, metodi statici e metodi astratti.
+- **Implementazione**: Una classe implementa un'interfaccia, fornendo un'implementazione concreta per tutti i suoi metodi astratti.
+
+### Design Multistrato:
+- **Applicazione Pratica**: Le interfacce sono spesso utilizzate nei design software multistrato, dove definiscono contratti tra diversi livelli dell'applicazione (ad esempio, UI, logica di business, accesso ai dati).
+- **Esempio**:
+  ```java
+  public interface DataAccess {
+      void save(Object data);
+  }
+  ```
+
+### Benefici dell'Uso delle Interfacce:
+- **Disaccoppiamento**: Le interfacce aiutano a disaccoppiare i componenti del software, rendendo le modifiche meno invasive e il codice più modulare.
+- **Testabilità**: Facilitano la scrittura di test unitari, consentendo mock-up e stub dei componenti.
+
+Le interfacce sono fondamentali per realizzare un design software pulito, organizzato e manutenibile.
+
+## Operazioni di Flusso (Stream) in Java
+
+Le operazioni di flusso (Stream) in Java 8 e versioni successive rappresentano un paradigma di programmazione funzionale che consente di elaborare sequenze di elementi in modo efficace e leggibile.
+
+### Caratteristiche dei Stream:
+- **Elaborazione Funzionale**: Consentono operazioni come map, filter, e reduce su collezioni di dati.
+- **Flussi di Dati**: Un flusso non memorizza i dati, ma trasmette elementi da una sorgente, come una collezione, attraverso una pipeline di operazioni.
+
+### Esempi di Operazioni Stream:
+- **Filter**:
+  ```java
+  stream.filter(x -> x > 5)
+  ```
+- **Map**:
+  ```java
+  stream.map(x -> x * 2)
+  ```
+- **Reduce**:
+  ```java
+  stream.reduce(0, (a, b) -> a + b)
+  ```
+
+### Benefici dell'Uso dei Stream:
+- **Leggibilità e Concisenza**: Riducono la necessità di codice boilerplate, rendendo il codice più leggibile e conciso.
+- **Parallelismo**: Facilitano l'elaborazione parallela dei dati.
+
+L'integrazione delle operazioni di flusso porta a un approccio più dichiarativo alla manipolazione dei dati, rendendo il codice più pulito e più facile da comprendere.
