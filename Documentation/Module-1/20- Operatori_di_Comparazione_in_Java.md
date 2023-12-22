@@ -1,4 +1,3 @@
-
 # Operatori di Comparazione in Java
 
 ## Introduzione
