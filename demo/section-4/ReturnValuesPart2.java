@@ -1,14 +1,10 @@
 public class ReturnValuesPart2 {
     public static void main(String[] args) {
+        
         double area1 = calculateArea(2.3, 3.6);
-        double area2 = calculateArea(1.6, 2.4);
-        double area3 = calculateArea(2.6, 4.2);
-
-        // calculateArea(-5, 2.3);
-
+        printArea(2.3, 3.6, area1);
         String englishExplanation = explainArea("English");
-        String frenchExplanation = explainArea("French");
-        String spanishExplanation = explainArea("Spanish");
+        System.out.println(englishExplanation);
     }
 
     public static double calculateArea(double length, double height) {
@@ -35,5 +31,9 @@ public class ReturnValuesPart2 {
             default:
                 return "Language not available";
         }
+    }
+
+    public static void printArea(double length, double width, double area) {
+        System.out.println("A rectangle with a length of " + length + "and a width of " + width + "has an area of " + area);
     }
 }
