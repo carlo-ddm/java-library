@@ -1,7 +1,7 @@
 
 [Back to Summary](../Summary.md)
 
-# Ambito delle Variabili in Java: Confronto e Implicazioni
+# Scope delle Variabili in Java: Confronto e Implicazioni
 
 ## Introduzione
 Lo scope delle variabili in Java determina la visibilità e la durata di queste all'interno del codice. Analizziamo due esempi diversi dello scope delle variabili, con riferimento alle due versioni del file `Scope.java`.
