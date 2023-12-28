@@ -21,6 +21,7 @@ public class Blackjack {
         // Task 5 – Print the sum of your hand value.
         // – print: your total is: <hand value>
         System.out.println("your total is: " + userTotal);
+        bustChecker("player", userTotal);
 
         // Task 6 – Get two random cards for the dealer.
         // – Print: The dealer shows \n" + <first card> + "\nand has a card facing down
@@ -52,6 +53,9 @@ public class Blackjack {
         System.out.println("\n" + "Dealer's turn" + "\n" + "The dealer's cards are" + "\n" + randomCard1 + "and a"
                 + "\n" + randomCard2);
         bustChecker("dealer", dealerTotal);
+        while (dealerTotal <= 17) {
+
+        }
 
         // For tasks 9 to 13, see the article: Blackjack Part II.
         scan.close();
@@ -66,9 +70,6 @@ public class Blackjack {
     }
 
     public static int getRandomNumber(String turn) {
-        // String randomCard1 = "";
-        // String randomCard2 = "";
-        // int randomNum;
         int sum = 0;
         for (int i = 1; i <= 2; i++) {
             randomNum = (int) (Math.random() * 13) + 1;
