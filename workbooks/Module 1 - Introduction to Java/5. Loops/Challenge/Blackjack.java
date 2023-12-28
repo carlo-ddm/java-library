@@ -3,6 +3,9 @@ import java.util.Scanner;
 public class Blackjack {
 
     public static Scanner scan = new Scanner(System.in);
+    public static int randomNum;
+    public static String randomCard1 = "";
+    public static String randomCard2 = "";
 
     public static void main(String[] args) {
         System.out.println("\nWelcome to Java Casino!");
@@ -33,18 +36,39 @@ public class Blackjack {
         // – print: (new line) You get a (new line) <show new card>.
         // - print: your new total is <total>
         // 2. Once the player stays, break the loop.
+        String res = "";
+        while (res != "stay") {
+            res = hitOrStay();
+            if (!res.equalsIgnoreCase("stay")) {
+                int randomNum = (int) (Math.random() * 13) + 1;
+                String card = cardString(randomNum);
+                userTotal += randomNum;
+                dealerTotal += randomNum;
+                System.out.println("\n" + "You get a " + "\n" + card);
+                bustChecker("player", userTotal);
+            }
 
-        String res = hitOrStay();
+        }
+        System.out.println("\n" + "Dealer's turn" + "\n" + "The dealer's cards are" + "\n" + randomCard1 + "and a"
+                + "\n" + randomCard2);
+        bustChecker("dealer", dealerTotal);
 
         // For tasks 9 to 13, see the article: Blackjack Part II.
         scan.close();
 
     }
 
+    public static String bustChecker(String turn, int total) {
+        if (total > 21) {
+            return "Bust!" + turn + " loses";
+        }
+        return null;
+    }
+
     public static int getRandomNumber(String turn) {
-        String randomCard1 = "";
-        String randomCard2 = "";
-        int randomNum;
+        // String randomCard1 = "";
+        // String randomCard2 = "";
+        // int randomNum;
         int sum = 0;
         for (int i = 1; i <= 2; i++) {
             randomNum = (int) (Math.random() * 13) + 1;
@@ -214,7 +238,7 @@ public class Blackjack {
      *         3. Returns the user's option
      */
     public static String hitOrStay() {
-        System.out.println("Hit or Stay?");
+        System.out.println("\n" + "Hit or Stay?");
         String res = scan.nextLine();
         while (!res.equalsIgnoreCase("hit") || !res.equalsIgnoreCase("stay")) {
             System.out.println("Please write 'hit' or 'stay'");
