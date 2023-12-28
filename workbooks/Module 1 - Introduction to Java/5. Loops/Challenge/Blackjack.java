@@ -13,6 +13,35 @@ public class Blackjack {
         scan.nextLine();
         // Task 4 – Get two random cards.
         // – Print them: \n You get a \n" + <randomCard> + "\n and a \n" + <randomCard>
+        int userTotal = getRandomNumber("player");
+
+        // Task 5 – Print the sum of your hand value.
+        // – print: your total is: <hand value>
+        System.out.println("your total is: " + userTotal);
+
+        // Task 6 – Get two random cards for the dealer.
+        // – Print: The dealer shows \n" + <first card> + "\nand has a card facing down
+        // \n" + <facedown card>
+        // – Print: \nThe dealer's total is hidden
+        int dealerTotal = getRandomNumber("dealer");
+        System.out.println("\nThe dealer's total is hidden");
+
+        // Task 8 – Keep asking the player to hit or stay (while loop).
+        // 1. Every time the player hits
+        // – draw a new card.
+        // – calculate their new total.
+        // – print: (new line) You get a (new line) <show new card>.
+        // - print: your new total is <total>
+        // 2. Once the player stays, break the loop.
+
+        String res = hitOrStay();
+
+        // For tasks 9 to 13, see the article: Blackjack Part II.
+        scan.close();
+
+    }
+
+    public static int getRandomNumber(String turn) {
         String randomCard1 = "";
         String randomCard2 = "";
         int randomNum;
@@ -27,35 +56,19 @@ public class Blackjack {
                 sum += randomNum;
             }
         }
-        ;
+        if (turn == "player") {
+            System.out.println(
+                    "\n" + "You get a \n" +
+                            "\n" + randomCard1 + "\n" +
+                            " and a \n" +
+                            "\n" + randomCard2);
 
-        System.out.println(
-                "\n" + " You get a \n" +
-                        "\n" + randomCard1 + "\n" +
-                        " and a \n" +
-                        "\n" + randomCard2);
-
-        // Task 5 – Print the sum of your hand value.
-        // – print: your total is: <hand value>
-        System.out.println("your total is: " + sum);
-
-        // Task 6 – Get two random cards for the dealer.
-        // – Print: The dealer shows \n" + <first card> + "\nand has a card facing down
-        // \n" + <facedown card>
-        // – Print: \nThe dealer's total is hidden
-
-        // Task 8 – Keep asking the player to hit or stay (while loop).
-        // 1. Every time the player hits
-        // – draw a new card.
-        // – calculate their new total.
-        // – print: (new line) You get a (new line) <show new card>.
-        // - print: your new total is <total>
-
-        // 2. Once the player stays, break the loop.
-
-        // For tasks 9 to 13, see the article: Blackjack Part II.
-        scan.close();
-
+        } else {
+            System.out.println("\n" + "The dealer shows \n" +
+                    "\n" + randomCard1 + "\n" +
+                    "and has a card facing down" + "\n" + faceDown());
+        }
+        return sum;
     }
 
     /**
@@ -200,4 +213,17 @@ public class Blackjack {
      *         Please write 'hit' or 'stay'
      *         3. Returns the user's option
      */
+    public static String hitOrStay() {
+        System.out.println("Hit or Stay?");
+        String res = scan.nextLine();
+        while (!res.equalsIgnoreCase("hit") || !res.equalsIgnoreCase("stay")) {
+            System.out.println("Please write 'hit' or 'stay'");
+            res = scan.nextLine();
+            if (res.equalsIgnoreCase("hit") || res.equalsIgnoreCase("stay")) {
+                break;
+            }
+            continue;
+        }
+        return res;
+    }
 }
