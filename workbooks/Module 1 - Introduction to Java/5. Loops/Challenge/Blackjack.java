@@ -6,65 +6,90 @@ public class Blackjack {
     public static int randomNum;
     public static String randomCard1 = "";
     public static String randomCard2 = "";
+    public static int userTotal = 0;
+    public static int dealerTotal = 0;
 
     public static void main(String[] args) {
         System.out.println("\nWelcome to Java Casino!");
         System.out.println("Do you have a knack for Black Jack?");
         System.out.println("We shall see..");
         System.out.println("..Ready? Press anything to begin!");
-        // Task 3 – Wait for the user to press enter.
+
         scan.nextLine();
-        // Task 4 – Get two random cards.
-        // – Print them: \n You get a \n" + <randomCard> + "\n and a \n" + <randomCard>
-        int userTotal = getRandomNumber("player");
+        userTotal = getRandomNumber("player");
+        String check = bustChecker("player", userTotal);
+        if (check != null) {
+            System.out.println(check);
+            System.exit(0);
+        }
+        dealerTotal = getRandomNumber("dealer");
 
-        // Task 5 – Print the sum of your hand value.
-        // – print: your total is: <hand value>
-        System.out.println("your total is: " + userTotal);
-        bustChecker("player", userTotal);
-
-        // Task 6 – Get two random cards for the dealer.
-        // – Print: The dealer shows \n" + <first card> + "\nand has a card facing down
-        // \n" + <facedown card>
-        // – Print: \nThe dealer's total is hidden
-        int dealerTotal = getRandomNumber("dealer");
-        System.out.println("\nThe dealer's total is hidden");
-
-        // Task 8 – Keep asking the player to hit or stay (while loop).
-        // 1. Every time the player hits
-        // – draw a new card.
-        // – calculate their new total.
-        // – print: (new line) You get a (new line) <show new card>.
-        // - print: your new total is <total>
-        // 2. Once the player stays, break the loop.
         String res = "";
         while (res != "stay") {
             res = hitOrStay();
             if (!res.equalsIgnoreCase("stay")) {
-                int randomNum = (int) (Math.random() * 13) + 1;
-                String card = cardString(randomNum);
-                userTotal += randomNum;
-                dealerTotal += randomNum;
-                System.out.println("\n" + "You get a " + "\n" + card);
-                bustChecker("player", userTotal);
+                getCard("player");
+            } else {
+                break;
             }
 
         }
-        System.out.println("\n" + "Dealer's turn" + "\n" + "The dealer's cards are" + "\n" + randomCard1 + "and a"
-                + "\n" + randomCard2);
-        bustChecker("dealer", dealerTotal);
-        while (dealerTotal <= 17) {
-
+        System.out
+                .println("\n" + "Dealer's turn" + "\n" + "The dealer's cards are" + "\n" + randomCard1 + "\n" + "and a"
+                        + "\n" + randomCard2);
+        String checkDealer = bustChecker("dealer", userTotal);
+        if (checkDealer != null) {
+            System.out.println(check);
+            System.exit(0);
         }
 
-        // For tasks 9 to 13, see the article: Blackjack Part II.
+        while (dealerTotal <= 17) {
+            getCard("dealer");
+            check = bustChecker("dealer", dealerTotal);
+            if (check != null) {
+                System.out.println(check);
+                System.exit(0);
+            }
+        }
+
+        System.out.println("\nUser total: " + userTotal);
+        System.out.println("Dealer total: " + dealerTotal);
+        if (userTotal > dealerTotal) {
+
+            System.out.println("\nPlyer wins!");
+        } else {
+            System.out.println("\nDealer wins!");
+        }
+
         scan.close();
 
     }
 
+    public static void getCard(String turn) {
+        int randomNum = (int) (Math.random() * 13) + 1;
+        String card = cardString(randomNum);
+        if (turn.equalsIgnoreCase("player")) {
+            userTotal += randomNum;
+            System.out.println("\n" + "You get a " + "\n" + card);
+            String check = bustChecker(turn, userTotal);
+            if (check != null) {
+                System.out.println(check);
+                System.exit(0);
+            }
+        } else {
+            dealerTotal += randomNum;
+            System.out.println("\n" + "Dealer gets a " + "\n" + card);
+            String check = bustChecker(turn, userTotal);
+            if (check != null) {
+                System.out.println(check);
+                System.exit(0);
+            }
+        }
+    }
+
     public static String bustChecker(String turn, int total) {
         if (total > 21) {
-            return "Bust!" + turn + " loses";
+            return "\nBust! " + turn + " loses";
         }
         return null;
     }
@@ -81,6 +106,7 @@ public class Blackjack {
                 sum += randomNum;
             }
         }
+
         if (turn == "player") {
             System.out.println(
                     "\n" + "You get a \n" +
@@ -88,38 +114,27 @@ public class Blackjack {
                             " and a \n" +
                             "\n" + randomCard2);
 
+            System.out.println("your total is: " + sum);
+            String check = bustChecker("player", sum);
+            if (check != null) {
+                System.out.println("\n" + check);
+                System.exit(0);
+            }
+
         } else {
             System.out.println("\n" + "The dealer shows \n" +
                     "\n" + randomCard1 + "\n" +
                     "and has a card facing down" + "\n" + faceDown());
+            System.out.println("\nThe dealer's total is hidden");
+
         }
         return sum;
     }
 
-    /**
-     * Task 1 – make a function that returns a random number between 1 and 13
-     * Function name – drawRandomCard
-     * 
-     * @return (int)
-     *
-     *         Inside the function:
-     *         1. Gets a random number between 1 and 13.
-     *         2. Returns a card.
-     */
     public static int drawRandomCard() {
         return (int) (Math.random() * 13) + 1;
     }
 
-    /**
-     * Task 2 – make a function that returns a String drawing of the card.
-     * Function name – cardString
-     * 
-     * @param cardNumber (int)
-     * @return (String)
-     *
-     *         Inside the function:
-     *         1. Returns a String drawing of the card.
-     */
     public static String cardString(int cardNumber) {
         switch (cardNumber) {
             case 1:
@@ -225,28 +240,16 @@ public class Blackjack {
                 "  |_____|\n";
     }
 
-    /**
-     * Task 7 – make a function that asks the user to hit or stay.
-     * Function name – hitOrStay
-     * 
-     * @return (String)
-     *
-     *         Inside the function:
-     *         1. Asks the user to hit or stay.
-     *         2. If the user doesn't enter "hit" or "stay", keep asking them to try
-     *         again by printing:
-     *         Please write 'hit' or 'stay'
-     *         3. Returns the user's option
-     */
     public static String hitOrStay() {
         System.out.println("\n" + "Hit or Stay?");
         String res = scan.nextLine();
         while (!res.equalsIgnoreCase("hit") || !res.equalsIgnoreCase("stay")) {
-            System.out.println("Please write 'hit' or 'stay'");
-            res = scan.nextLine();
             if (res.equalsIgnoreCase("hit") || res.equalsIgnoreCase("stay")) {
                 break;
             }
+            System.out.println("Please write 'hit' or 'stay'");
+            res = scan.nextLine();
+
             continue;
         }
         return res;
