@@ -1,6 +1,7 @@
 public class HighScore {
     public static void main(String[] args) {
         int[] scores = {randomNumber(), randomNumber(), randomNumber(), randomNumber(), randomNumber(), randomNumber(), randomNumber(), randomNumber(), randomNumber(), randomNumber()};
+        int seat = 0;
         
         int highScore = 0;
         System.out.print("Here are the scores: ");    
@@ -13,9 +14,15 @@ public class HighScore {
         
        
         System.out.println("\n\nThe highest score is: " + highScore + ". Impressive!");
+
+        for (int i = 0; i < scores.length; i++) {
+            if (scores[i] == highScore) {
+                seat = i;
+            }
+        }
         
         // TODO : See instructions on Learn the Part (Workbook 6.6)
-        System.out.println("It's the gentleman in seat: <index>. Give that man a cookie!");
+        System.out.println("It's the gentleman in seat: " + seat +". Give that man a cookie!");
 
     }
     
