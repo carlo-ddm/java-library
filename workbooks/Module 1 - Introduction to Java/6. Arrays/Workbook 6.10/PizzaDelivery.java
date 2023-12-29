@@ -20,6 +20,10 @@ public class PizzaDelivery {
         System.out.println("\nThank you! Here are the toppings you ordered");
         
         // Task 2 here
+        for (int i = 0; i < toppings.length; i++) {
+            System.out.print((i + 1) + ".");
+            scan.nextLine();
+        }
         
         System.out.println("\nPress anything to confirm your order.");
         scan.nextLine();
