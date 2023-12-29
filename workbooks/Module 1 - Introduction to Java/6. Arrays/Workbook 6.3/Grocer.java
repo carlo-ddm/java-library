@@ -7,7 +7,7 @@ public class Grocer {
         System.out.println("\nDo you sell coffee?");
 
         for (int i = 0; i < aisles.length; i++) {
-            if (aisles[i] == "coffee") {
+            if (aisles[i].equals("coffee")) {
                 System.out.println("\nWe have that in aisle: " + i);
             }
         }
