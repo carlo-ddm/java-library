@@ -1,4 +1,3 @@
-
 [Back to Summary](../Summary.md)
 
 # Approfondimento sul Ciclo For in Java

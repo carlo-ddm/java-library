@@ -1,4 +1,3 @@
-
 [Back to Summary](../Summary.md)
 
 # Scope delle Variabili in Java: Confronto e Implicazioni

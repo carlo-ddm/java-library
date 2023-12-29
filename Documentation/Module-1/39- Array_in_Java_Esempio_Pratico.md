@@ -1,4 +1,3 @@
-
 [Back to Summary](../Summary.md)
 
 # Array in Java: Un Esempio Pratico

@@ -1,4 +1,3 @@
-
 [Back to Summary](../Summary.md)
 
 # Iterazione su Array in Java: Esempi Pratici
