@@ -46,18 +46,18 @@ public class TicTacToe {
     for (int i = 1; i <= turns.length; i++) {
 
       if (i % 2 == 0) {
-        System.out.println("O");
+        System.out.println('O');
         int[] selectedSpot = askUser(gameBoard);
         gameBoard[selectedSpot[0]][selectedSpot[1]] = 'O';
-        System.out.println(Arrays.toString(gameBoard));
-        System.out.println(gameBoard);
+        printBoard(gameBoard);
+        checkWin(gameBoard);
 
       } else {
-        System.out.println("X");
+        System.out.println('X');
         int[] selectedSpot = askUser(gameBoard);
         gameBoard[selectedSpot[0]][selectedSpot[1]] = 'X';
-        System.out.println(Arrays.toString(gameBoard));
-        System.out.println(gameBoard);
+        printBoard(gameBoard);
+        checkWin(gameBoard);
 
       }
     }
@@ -103,15 +103,17 @@ public class TicTacToe {
    * 
    */
   public static int[] askUser(char[][] board) {
-    String input = scan.nextLine();
-    String[] data = input.split(" ");
-    int[] dataInt = Arrays.stream(data).mapToInt(Integer::parseInt).toArray();
-
-    while (board[dataInt[0]][dataInt[1]] != '_') {
-      System.out.println("\nThe spot is taken. Try again.");
+    while (true) {
+      String input = scan.nextLine();
+      String[] data = input.split(" ");
+      int[] dataInt = Arrays.stream(data).mapToInt(Integer::parseInt).toArray();
+      if (board[dataInt[0]][dataInt[1]] != '_') {
+        System.out.println("\nThe spot is taken. Try again.");
+        continue;
+      }
+      return dataInt;
     }
 
-    return dataInt;
   }
 
   /**
@@ -128,5 +130,69 @@ public class TicTacToe {
    *         4. Check the left diagonal for a straight X or straight O (Task 9).
    *         5. Check the right diagonal for a straight X or straight O (Task 10).
    */
+  public static int checkWin(char[][] board) {
+    int counter = 0;
+    counter = checkRows(board);
+    counter = checkColumns(board);
+    counter = checkLeft(board);
+    counter = checkRight(board);
+    return counter;
+  }
+
+  public static int checkRows(char[][] board) {
+    int count = 0;
+    for (int i = 0; i < board.length; i++) {
+      for (int j = 0; j < board[i].length; j++) {
+        if (board[i][j] == 'X') {
+          count++;
+        }
+
+        if (board[i][j] == 'O') {
+          count--;
+        }
+      }
+
+      if (Math.abs(count) == 3) {
+        return count;
+      } else {
+        count = 0;
+      }
+
+    }
+    return count;
+  }
+
+  public static int checkColumns(char[][] board) {
+    int count = 0;
+    for (int i = 0; i < board.length; i++) {
+      for (int j = 0; j < board[i].length; j++) {
+        if (board[j][i] == 'X') {
+          count++;
+        }
+
+        if (board[j][i] == 'O') {
+          count--;
+        }
+      }
+
+      if (Math.abs(count) == 3) {
+        return count;
+      } else {
+        count = 0;
+      }
+
+    }
+    return count;
+  }
+
+  public static int checkLeft(char[][] board) {
+    int count = 0;
+    return count;
+  }
+
+  public static int checkRight(char[][] board) {
+    int count = 0;
+    return count;
+  }
 
 }
