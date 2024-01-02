@@ -10,6 +10,19 @@ public class RandomNumbers {
 
         print2DArray(array);
 
+        System.out.println("\n");
+
+        int[][] array2 = new int[10][10];
+
+        for (int i = 0; i < array2.length; i++) {
+            for (int j = 0; j < array2[i].length; j++) {
+                array2[i][j] = randomNumber();
+            }
+            
+        }
+
+        print2DArray(array2);
+
     }
 
     public static int randomNumber() {
