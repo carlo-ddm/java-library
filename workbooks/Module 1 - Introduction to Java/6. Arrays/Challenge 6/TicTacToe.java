@@ -203,6 +203,17 @@ public class TicTacToe {
 
   public static int checkRight(char[][] board) {
     int count = 0;
+    for (int i = 0; i < board.length; i++) {
+      for (int j = 0; j < board.length; j++) {
+        if (board[i][i] == 'X') {
+          count++;
+        }
+
+        if (board[i][i] == 'O') {
+          count--;
+        }
+      }
+    }
     return count;
   }
 
