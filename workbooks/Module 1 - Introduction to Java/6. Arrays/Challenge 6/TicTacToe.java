@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class TicTacToe {
@@ -9,14 +10,14 @@ public class TicTacToe {
     System.out.println("\nLet's play tic tac toe");
 
     // Task 1: Create an array with three rows of '_' characters.
-    char[][] characters = {
+    char[][] board = {
         { '_', '_', '_' },
         { '_', '_', '_' },
         { '_', '_', '_' }
     };
 
     // Task 2: Call the function printBoard();
-    printBoard(characters);
+    printBoard(board);
 
     /*
      * { Task 3: Loop through turns.
@@ -39,6 +40,27 @@ public class TicTacToe {
      * 
      * }
      */
+    char[] turns = new char[9]; // 9 = total of turns
+    char[][] gameBoard = Arrays.copyOf(board, board.length);
+
+    for (int i = 1; i <= turns.length; i++) {
+
+      if (i % 2 == 0) {
+        System.out.println("O");
+        int[] selectedSpot = askUser(gameBoard);
+        gameBoard[selectedSpot[0]][selectedSpot[1]] = 'O';
+        System.out.println(Arrays.toString(gameBoard));
+        System.out.println(gameBoard);
+
+      } else {
+        System.out.println("X");
+        int[] selectedSpot = askUser(gameBoard);
+        gameBoard[selectedSpot[0]][selectedSpot[1]] = 'X';
+        System.out.println(Arrays.toString(gameBoard));
+        System.out.println(gameBoard);
+
+      }
+    }
 
     scan.close();
   }
@@ -80,6 +102,17 @@ public class TicTacToe {
    *         3. Return the row and column in an int[] array.
    * 
    */
+  public static int[] askUser(char[][] board) {
+    String input = scan.nextLine();
+    String[] data = input.split(" ");
+    int[] dataInt = Arrays.stream(data).mapToInt(Integer::parseInt).toArray();
+
+    while (board[dataInt[0]][dataInt[1]] != '_') {
+      System.out.println("\nThe spot is taken. Try again.");
+    }
+
+    return dataInt;
+  }
 
   /**
    * Task 6 - Write a function that determines the winner
