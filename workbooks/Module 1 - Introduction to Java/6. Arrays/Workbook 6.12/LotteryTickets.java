@@ -13,7 +13,7 @@ public class LotteryTickets {
 
         System.out.print("Ticket 2 numbers: ");
         // Task 3 - Call printTicketNumbers for int[] ticket2.
-        printTicketNumbers(ticket);
+        printTicketNumbers(ticket2);
 
     }
 
