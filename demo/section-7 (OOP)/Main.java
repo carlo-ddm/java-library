@@ -1,16 +1,19 @@
 public class Main {
     public static void main(String[] args) {
         Car nissan = new Car("Nissan", 10000, 2020, "Green");
-        // nissan.make = "Nissan";
-        // nissan.price = 10000;
-        // nissan.year = 2020;
-        // nissan.color = "Green";
+
+        Car nissan2 = new Car(nissan);
+
+        nissan2.setColor("Yellow");
+        nissan.setColor("Orange");
+        nissan2.setColor("Blue");
+        nissan.setColor("Purple");
+        nissan2.setColor("Fuchsia");
+        nissan.setColor("Beige");
+
 
         Car dodge = new Car("Dodge", 11000, 2019, "Blue");
-        // dodge.make = "Dodge";
-        // dodge.price = 11000;
-        // dodge.year = 2019;
-        // dodge.color = "Blue";
+
 
         nissan.setColor("Jet Black");
         dodge.setColor("Jet Black");
