@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Hangman {
 
     public static String[] words = { "ant", "baboon", "badger", "bat", "bear", "beaver", "camel",
@@ -68,28 +70,45 @@ public class Hangman {
                     " =========\n" };
 
     public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
         String word = word(words);
-        char[] hiddenWord = startGame(word);
+        char[] wordToCharArr = wordToCharArr(word);
+
         String strHiddenWord = "";
-        for (int i = 0; i < hiddenWord.length; i++) {
-            strHiddenWord += hiddenWord[i] + " ";
+        for (int i = 0; i < wordToCharArr.length; i++) {
+            strHiddenWord += wordToCharArr[i] + " ";
         }
         System.out.println(gallows[0]);
         System.out.println("Word: " + strHiddenWord);
+        String guessed = "";
         System.out.println("Misses: ");
-        System.out.println("Guess: ");
+        System.out.print("Guess: " + guessed);
+        guessed = scan.nextLine();
+
+        int i = 0;
+        while (i <= gallows.length) {
+            String character = scan.nextLine();
+            if (character.length() > 0) {
+                System.out.print("Selezione invalida. Riprova: ");
+                continue;
+            }
+            char selectedChar = character.charAt(0);
+
+            // check
+        }
+
     }
 
     public static String word(String[] words) {
         return words[(int) (Math.random() * words.length) + 1];
     }
 
-    public static char[] startGame(String word) {
-        char[] hiddenWord = new char[word.length()];
-        for (int i = 0; i < hiddenWord.length; i++) {
-            hiddenWord[i] = '_';
-        }
-        return hiddenWord;
+    public static char[] wordToCharArr(String word) {
+        return new char[word.length()];
     }
+
+    // public static char check() {
+
+    // }
 
 }
