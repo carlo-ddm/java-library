@@ -61,7 +61,7 @@ public class Car {
     }
 
     public void setParts(String[] parts) {
-        this.parts = parts;
+        this.parts = Arrays.copyOf(parts, parts.length);
     }
 
     public void drive() {
