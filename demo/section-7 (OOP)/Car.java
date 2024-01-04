@@ -70,4 +70,18 @@ public class Car {
         System.out.println("Please drive your car to the nearest exit.");
     }
 
+    /**
+     * Soluzione toString (si può scrivere anche attraverso estensione Java Code
+     * Generator)
+     */
+
+    @Override
+    public String toString() {
+        return "Make: " + this.make + ".\n"
+                + "Price: " + this.price + ".\n"
+                + "Year: " + this.year + ".\n"
+                + "Color: " + this.color + ".\n"
+                + "Parts: " + Arrays.toString(parts) + ".\n";
+    }
+
 }
