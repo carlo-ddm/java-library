@@ -1,4 +1,3 @@
-
 # Approfondimento sui Setter in Java
 
 I setter sono metodi utilizzati in Java per aggiornare i campi di un oggetto. Sono fondamentali per la gestione dell'incapsulamento in programmazione orientata agli oggetti.

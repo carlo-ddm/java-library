@@ -1,4 +1,3 @@
-
 # Utilizzo dei Metodi nella Programmazione Orientata agli Oggetti (OOP)
 
 Nella programmazione orientata agli oggetti (OOP), i metodi sono funzioni o procedure associate a una classe. In Java, i metodi sono utilizzati per definire il comportamento degli oggetti.

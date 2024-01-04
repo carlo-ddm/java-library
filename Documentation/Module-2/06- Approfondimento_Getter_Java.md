@@ -1,4 +1,3 @@
-
 # Approfondimento sui Getter in Java
 
 I getter sono metodi fondamentali nella programmazione orientata agli oggetti in Java, utilizzati per accedere in modo sicuro ai campi privati di un oggetto.

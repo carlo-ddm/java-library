@@ -1,4 +1,3 @@
-
 # Costruttore Copia in Java
 
 Il costruttore copia è una caratteristica fondamentale nella gestione di oggetti mutabili in Java. Questa documentazione esplora il concetto di costruttore copia e la sua importanza.

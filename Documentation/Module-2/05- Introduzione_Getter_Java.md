@@ -1,4 +1,3 @@
-
 # Introduzione ai Getter in Java
 
 I getter sono una componente fondamentale nella programmazione orientata agli oggetti in Java, essenziali per controllare l'accesso ai campi di una classe.

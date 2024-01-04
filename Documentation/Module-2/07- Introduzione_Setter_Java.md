@@ -1,4 +1,3 @@
-
 # Introduzione ai Setter in Java
 
 Dopo aver esplorato il concetto di getter per accedere ai dati in un oggetto, è il momento di approfondire il concetto complementare in Java: i setter.
