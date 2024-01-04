@@ -8,6 +8,10 @@ public class Dealership {
         }
     }
 
+    public void sell(int index) {
+        this.cars[index].drive();
+    }
+
     @Override
     public String toString() {
         String temp = "";

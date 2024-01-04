@@ -23,6 +23,7 @@ public class Main {
         int index = scan.nextInt();
 
         // sell car here... 
+        dealership.sell(index);
 
         scan.close();
 
