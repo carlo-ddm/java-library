@@ -10,5 +10,6 @@ public class Main {
         };
 
         Dealership dealership = new Dealership(cars);
+        cars[3] = new Car("Hyundau", 7000, 2019, "orange", new String[] { "tires", "filter" });
     }
 }
