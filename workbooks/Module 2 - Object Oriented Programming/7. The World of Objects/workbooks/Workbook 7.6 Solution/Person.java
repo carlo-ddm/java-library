@@ -59,6 +59,7 @@ public class Person {
     public String[] getPassport() {
         return Arrays.copyOf(passport, passport.length);
     }
+    
     public void setPassport() {
         this.passport = new String[] {name, nationality, dateOfBirth};
     }

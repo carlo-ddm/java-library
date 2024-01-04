@@ -12,6 +12,7 @@ public class Person {
         this.name = name;
         this.nationality = nationality;
         this.dateOfBirth = dateOfBirth;
+        this.passport = new String[3];
         this.seatNumber = seatNumber;
     }
 
@@ -55,8 +56,20 @@ public class Person {
         this.seatNumber = seatNumber;
     }
 
-    public void setPassport() {
+    public String[] getPassport() {
+        return Arrays.copyOf(this.passport, this.passport.length);
+    }
 
+    /** In questo modo assegno i valori dell'oggetto all'array passport dell'oggetto corrente */
+    // public void setPassport() {
+    //     this.passport[0] = this.name;
+    //     this.passport[1] = this.nationality;
+    //     this.passport[2] = this.dateOfBirth;
+    // }
+
+    /** In questo modo assegno un nuovo array con i valori dell'oggetto corrente all'array passport dell'oggetto corrente */
+    public void setPassport() {
+        this.passport = new String[] {name, nationality, dateOfBirth};
     }
 
     public boolean applyPassport() {
