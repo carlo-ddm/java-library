@@ -8,6 +8,14 @@ public class Dealership {
         }
     }
 
+    public Car getCar(int index) {
+        return new Car(this.cars[index]);
+    }
+
+    public void setCar(int index, Car newCar) {
+        this.cars[index] = new Car(newCar);
+    }
+
     public void sell(int index) {
         this.cars[index].drive();
     }
