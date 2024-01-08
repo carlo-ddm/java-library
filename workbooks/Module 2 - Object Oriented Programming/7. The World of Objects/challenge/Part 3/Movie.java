@@ -28,12 +28,12 @@ public class Movie {
         return format;
     }
 
-    public double getRating() {
-        return rating;
-    }
-
     public void setFormat(String format) {
         this.format = format;
+    }
+
+    public double getRating() {
+        return rating;
     }
 
     public void setRating(double rating) {
