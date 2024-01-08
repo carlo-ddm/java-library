@@ -3,6 +3,7 @@ import java.util.Scanner;
 public class Main {
 
     static Store store = new Store();
+    static Scanner scanner = new Scanner(System.in); // Scanner come variabile statica
 
     public static void main(String[] args) {
         Movie[] movies = new Movie[] {
@@ -25,20 +26,20 @@ public class Main {
         printStore();
         setStoreMovieRating();
         userInput();
+        scanner.close(); // Chiudi lo scanner solo qui
     }
 
     public static void userInput() {
-        Scanner scanner = new Scanner(System.in);
         String status = "continue";
         while (status.equals("continue")) {
             System.out.print("To edit another rating, type: 'continue': ");
             status = scanner.next();
-            if (status.equals("stop")) {
+            if (status.equals("continue")) {
+                setStoreMovieRating();
+            } else {
                 System.exit(0);
             }
-            setStoreMovieRating();
         }
-        scanner.close();
     }
 
     public static void printStore() {
@@ -47,13 +48,10 @@ public class Main {
     }
 
     public static void setStoreMovieRating() {
-        Scanner scan = new Scanner(System.in);
         System.out.print("\nPlease choose an integer between 0 - 9: ");
-        // grab nextInt()
-        int num = scan.nextInt();
+        int num = scanner.nextInt();
         System.out.print("Set a new rating for " + store.getMovie(num).getName() + ": ");
-        double rating = scan.nextDouble();
+        double rating = scanner.nextDouble();
         store.setRating(num, rating);
-        scan.close();
     }
 }
