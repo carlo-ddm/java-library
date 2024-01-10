@@ -28,7 +28,7 @@ public class Airline {
                     + " is already taken. Please choose another seat.\n");
             person.chooseSeat();
         }
-        people[person.getSeatNumber() - 1] = new Person(person);
+        this.people[person.getSeatNumber() - 1] = new Person(person);
         System.out.println("Thank you " + person.getName() + " for flying with Java airlines. Your seat number is "
                 + person.getSeatNumber() + ".\n");
     }
