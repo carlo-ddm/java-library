@@ -1,6 +1,6 @@
 [Back to Summary](../Summary.md)
 
-# Differenze tra `scan.next()` e `scan.nextLine()` in Java
+# Differenze tra `scan.next()` e `scan.nextLine()`
 
 ## Introduzione
 In Java, la classe `Scanner` è comunemente usata per leggere l'input dall'utente. Due metodi molto utilizzati di questa classe sono `scan.next()` e `scan.nextLine()`. Comprendere la differenza tra questi due può aiutare a evitare errori comuni nell'input handling.

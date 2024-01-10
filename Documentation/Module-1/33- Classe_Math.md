@@ -1,6 +1,6 @@
 [Back to Summary](../Summary.md)
 
-# La Classe Math in Java
+# La Classe Math
 
 ## Introduzione
 La classe `Math` in Java è parte del pacchetto `java.lang` e fornisce una vasta gamma di metodi statici per eseguire operazioni matematiche fondamentali. Questa classe è cruciale per qualsiasi programmatore Java, poiché semplifica compiti complessi come calcoli trigonometrici, esponenziali, logaritmici e molto altro.
