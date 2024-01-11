@@ -1,7 +1,4 @@
-import java.util.Objects;
-
 public class Book {
-
     private String title;
     private String author;
     private double rating;
@@ -22,7 +19,7 @@ public class Book {
     }
 
     public String getTitle() {
-        return this.title;
+        return title;
     }
 
     public void setTitle(String title) {
@@ -30,7 +27,7 @@ public class Book {
     }
 
     public String getAuthor() {
-        return this.author;
+        return author;
     }
 
     public void setAuthor(String author) {
@@ -38,7 +35,7 @@ public class Book {
     }
 
     public double getRating() {
-        return this.rating;
+        return rating;
     }
 
     public void setRating(double rating) {
@@ -46,28 +43,11 @@ public class Book {
     }
 
     public double getPrice() {
-        return this.price;
+        return price;
     }
 
     public void setPrice(double price) {
         this.price = price;
-    }
-    
-
-    @Override
-    public boolean equals(Object o) {
-        if (o == this)
-            return true;
-        if (!(o instanceof Book)) {
-            return false;
-        }
-        Book book = (Book) o;
-        return Objects.equals(title, book.title) && Objects.equals(author, book.author) && rating == book.rating && price == book.price;
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(title, author, rating, price);
     }
 
 }
