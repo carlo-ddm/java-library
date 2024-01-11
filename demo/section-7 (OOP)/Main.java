@@ -9,6 +9,7 @@ public class Main {
         };
 
         Dealership dealership = new Dealership(cars);
+        System.out.println(dealership);
 
         // Get a deep copy of the car at index 0
         Car carAtIndex0 = dealership.getCar(0);
