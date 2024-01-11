@@ -4,7 +4,7 @@ public class Main {
     public static void main(String[] args) {
 
         City paris = new City("Paris", 2161000);
-        City copy = paris;
+        City copy = new City(paris);
 
         System.out.println(paris.equals(copy));
         copy.setPopulation(2059003);
