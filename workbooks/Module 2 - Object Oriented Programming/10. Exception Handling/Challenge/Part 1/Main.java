@@ -38,8 +38,8 @@ public class Main {
     public static int promptForChoice(Scanner scanner) {
         while (true) {
             System.out.print("\nPlease choose an integer between 0 - 9: ");
+            
             // 1. Anticipate the user not entering an integer.
-
             if (!scanner.hasNextInt()) {
                 scanner.next();
                 continue;
