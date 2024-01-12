@@ -12,7 +12,7 @@ public class MagazineLibrary {
     }
 
     public void setMagazine(Magazine magazine, int index) {
-        // Metodo set di magazines (ovverosia dell'ArrayList)
+        // Metodo 'set' di magazines (ovverosia dell'ArrayList)
         this.magazines.set(index, new Magazine(magazine));
     }
 
