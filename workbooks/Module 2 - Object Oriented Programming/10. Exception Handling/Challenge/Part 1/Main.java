@@ -20,12 +20,12 @@ public class Main {
     public static void userInput() {
         Scanner scanner = new Scanner(System.in);
         String status = "continue";
-
+    
         while (status.equals("continue")) {
             int choice = (promptForChoice(scanner));
             Movie movie = store.getMovie(choice);
             double rating = promptForRating(scanner, movie.getName());
-
+    
             movie.setRating(rating);
             store.setMovie(choice, movie);
             printStore();
@@ -38,57 +38,46 @@ public class Main {
     public static int promptForChoice(Scanner scanner) {
         while (true) {
             System.out.print("\nPlease choose an integer between 0 - 9: ");
-            
+
             // 1. Anticipate the user not entering an integer.
-            if (!scanner.hasNextInt()) {
-                scanner.next();
-                continue;
-            }
+
+            int choice = scanner.nextInt();
 
             // 2. Anticipate the choice being incorrect.
-            int choice = scanner.nextInt();
-            if (incorrectChoice(choice)) continue;
-            else return choice;
+            return choice;
         }
     }
 
     public static boolean incorrectChoice(int choice) {
         // TODO
-        return choice < 0 || choice > 9;
+        return false;
     }
 
     public static double promptForRating(Scanner scanner, String name) {
         while (true) {
             System.out.print("\nSet a new rating for " + name + ": ");
-
+            
             // 1. Anticipate the user not entering a double.
-            if (!scanner.hasNextDouble()) {
-                scanner.next();
-                continue;
-            }
 
-            // 2. Anticipate the rating being incorrect.
             double rating = scanner.nextDouble();
-            if (incorrectRating(rating)) continue;
-            else return rating;
-        }
+            
+            // 2. Anticipate the rating being incorrect.
+
+            return rating;
+         }
     }
 
     public static boolean incorrectRating(double rating) {
         // TODO
-        return rating < 0 || rating > 10;
+        return false;
     }
 
     public static void loadMovies(String fileName) throws FileNotFoundException {
         FileInputStream fis = new FileInputStream(fileName);
         Scanner scanFile = new Scanner(fis);
 
-        System.out.println("\n");
         while (scanFile.hasNextLine()) {
             // TODO
-            String line = scanFile.nextLine();
-            String[] components = line.split("--");
-            store.addMovie(new Movie(components[0], components[1], Double.valueOf(components[2])));
         }
         scanFile.close();
     }
