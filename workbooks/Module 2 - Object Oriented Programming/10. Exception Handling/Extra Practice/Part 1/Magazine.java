@@ -4,6 +4,12 @@ public class Magazine {
     private int issueNumber;
     private int publicationYear;
 
+    public Magazine(String title, String publisher, int issueNumber, int publicationYear) {
+        setTitle(title);
+        setPublisher(publisher);
+        setIssueNumber(issueNumber);
+        setPublicationYear(publicationYear);
+    }
 
     public String getTitle() {
         return this.title;
@@ -21,6 +27,9 @@ public class Magazine {
     }
 
     public void setPublisher(String publisher) {
+        if (publisher == null || publisher.isBlank()) {
+            throw new IllegalArgumentException("Publisher cannot be null or blank");
+        }
         this.publisher = publisher;
     }
 
@@ -29,6 +38,9 @@ public class Magazine {
     }
 
     public void setIssueNumber(int issueNumber) {
+        if (issueNumber <= 0) {
+            throw new IllegalArgumentException("Issue number must be greater than 0.");
+        }
         this.issueNumber = issueNumber;
     }
 
@@ -37,7 +49,9 @@ public class Magazine {
     }
 
     public void setPublicationYear(int publicationYear) {
+        if (publicationYear <= 0) {
+            throw new IllegalArgumentException("Publication year must be greater than 0.");
+        }
         this.publicationYear = publicationYear;
     }
-
 }
