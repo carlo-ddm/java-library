@@ -2,7 +2,19 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
 
+        String title = promptForTitle(scanner);
+        String publisher = promptForPublisher(scanner);
+        int issueNumber = promptForIssueNumber(scanner);
+        int publicationYear = promptForPublicationYear(scanner);
+    
+        Magazine newMagazine = new Magazine(title, publisher, issueNumber, publicationYear);
+    
+        MagazineLibrary library = new MagazineLibrary();
+        library.addMagazine(newMagazine);
+    
+        System.out.println("Magazine added to the library: " + newMagazine.getTitle());
     }
 
     public static boolean isNullOrBlank(String input) {
