@@ -46,9 +46,6 @@ public class Movie {
 
     public void setRating(double rating) {
         // TODO
-        if (rating < 0 || rating > 10) {
-            throw new IllegalArgumentException("This field is invalid");
-        }
         this.rating = rating;
     }
 
