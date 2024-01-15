@@ -1,3 +1,4 @@
+package src.main.java.com.ltp;
 public class Main {
 
     public static void main(String[] args) {
