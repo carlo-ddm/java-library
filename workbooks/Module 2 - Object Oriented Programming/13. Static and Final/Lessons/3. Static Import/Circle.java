@@ -1,3 +1,4 @@
+import static java.lang.Math.*;
 public class Circle {
 
     private double radius;
@@ -7,19 +8,19 @@ public class Circle {
     }
 
     public double getCircumference() {
-        return 2 * Math.PI * radius;
+        return 2 * PI * radius;
     }
 
     public double getArea() {
-        return Math.PI * radius * radius;
+        return PI * radius * radius;
     }
 
     public double getLargerRadius(double otherRadius) {
-        return Math.max(radius, otherRadius);
+        return max(radius, otherRadius);
     }
 
     public double getSmallerRadius(double otherRadius) {
-        return Math.min(radius, otherRadius);
+        return min(radius, otherRadius);
     }
 
     public double getRadiusSquared() {
