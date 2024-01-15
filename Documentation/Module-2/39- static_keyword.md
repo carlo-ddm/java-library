@@ -1,5 +1,4 @@
-
-# Documentazione sulla Parola Chiave `static` in Java
+# La parola Chiave `static`
 
 ## Introduzione al `static` in Java
 La parola chiave `static` in Java è usata per indicare che un membro di una classe (campo o metodo) appartiene alla classe stessa piuttosto che a un'istanza specifica.

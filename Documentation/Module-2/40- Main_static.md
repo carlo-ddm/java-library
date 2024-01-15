@@ -1,5 +1,5 @@
 
-# FAQ: Perché il Metodo `main` è Static in Java?
+# Perché il Metodo `main` è Static?
 
 ## Introduzione
 In Java, il metodo `main` è il punto di ingresso di qualsiasi applicazione. Una delle domande più frequenti è: "Perché il metodo `main` è dichiarato come static?"

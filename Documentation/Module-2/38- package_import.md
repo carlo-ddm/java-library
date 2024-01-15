@@ -1,5 +1,4 @@
-
-# Documentazione su `package` e `import` in Java
+# `package` e `import`
 
 ## Introduzione
 In Java, le parole chiave `package` e `import` sono fondamentali per organizzare e utilizzare classi e pacchetti. 

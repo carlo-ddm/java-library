@@ -1,5 +1,4 @@
-
-# Documentazione su HashMap e Uguaglianza degli Oggetti in Java
+# HashMap e Uguaglianza degli Oggetti
 
 ## Descrizione del Problema
 In Java, il comportamento di default dei metodi `equals` e `hashCode` si basa sulle referenze degli oggetti. Questo significa che, senza un override esplicito, questi metodi considerano uguali solo gli oggetti che sono la stessa istanza fisica in memoria.
