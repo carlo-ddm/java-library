@@ -2,6 +2,8 @@ public class Employee {
 
     private String name;
     private int age;
+    public static final int MINIMUM_AGE = 18;
+    public static final int MAXIMUM_AGE = 65;
     
     public Employee(String name, int age) {
         setAge(age);
@@ -22,7 +24,7 @@ public class Employee {
     }
 
     public void setAge(int age) {
-        if (age < 18 || age > 65) throw new IllegalArgumentException("INVALID AGE");
+        if (age < MINIMUM_AGE || age > MAXIMUM_AGE) throw new IllegalArgumentException("INVALID AGE");
         this.age = age;
     }
 
