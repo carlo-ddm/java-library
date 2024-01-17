@@ -5,6 +5,8 @@ public class Product {
     private String color;
     private String brand;
 
+    public final int LENGTH = 45;
+
 
     public Product(double price, String color, String brand) {
         setPrice(price);
