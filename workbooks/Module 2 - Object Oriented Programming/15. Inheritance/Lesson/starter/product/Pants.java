@@ -29,6 +29,7 @@ public class Pants extends Product {
 
     @Override
     public void fold() {
+        super.fold();
         // TODO Auto-generated method stub
         System.out.println("Hold the pants upright.");
         System.out.println("Fold one leg over the other.");

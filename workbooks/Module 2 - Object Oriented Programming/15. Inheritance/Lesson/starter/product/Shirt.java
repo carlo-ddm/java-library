@@ -24,6 +24,7 @@ public class Shirt extends Product {
     @Override
     public void fold() {
         // TODO Auto-generated method stub
+        super.fold();
         System.out.println("Lay a shirt on a flat surface.");
         System.out.println("Fold the shirt sideways.");
         System.out.println("Bring sleeves in.");
