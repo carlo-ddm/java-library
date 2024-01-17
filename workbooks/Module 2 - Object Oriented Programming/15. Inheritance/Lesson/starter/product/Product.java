@@ -6,17 +6,11 @@ public class Product {
     private String brand;
 
 
-    // public Product(double price, String color, String brand) {
-    //     setPrice(price);
-    //     setColor(color);
-    //     setBrand(brand);
-    // }
-
-    // public Product(Product source) {
-    //     setPrice(source.price);
-    //     setColor(source.color);
-    //     setBrand(source.brand);
-    // }
+    public Product(double price, String color, String brand) {
+        setPrice(price);
+        setColor(color);
+        setBrand(brand);
+    }
 
     public double getPrice() {
         return this.price;
