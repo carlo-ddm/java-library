@@ -31,7 +31,7 @@ public class Shirt extends Product {
     // Altri campi e metodi...
 }
 ```
-`Shirt` sovrascrive `fold()` per fornire istruzioni specifiche su come piegare una camicia.
+`Shirt` sovrascrive `fold()` per fornire istruzioni specifiche su come piegare una camicia. Altrimenti verrebbe richiamato il metodo `fold()` di `Product`
 
 ### Classe Figlia: Pants
 ```java
@@ -45,7 +45,7 @@ public class Pants extends Product {
     // Altri campi e metodi...
 }
 ```
-Analogamente, `Pants` sovrascrive `fold()` per fornire istruzioni specifiche su come piegare i pantaloni.
+Analogamente, `Pants` sovrascrive `fold()` per fornire istruzioni specifiche su come piegare i pantaloni. Altrimenti verrebbe richiamato il metodo `fold()` di `Product`
 
 ## Uso del Metodo Sovrascritto nel Main
 ```java

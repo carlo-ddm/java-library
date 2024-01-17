@@ -42,4 +42,6 @@ public abstract class Product {
         System.out.println("Folding my " + this.getBrand() + " " + this.getClass().getSimpleName());
     }
 
+    public abstract void wear();
+
 }

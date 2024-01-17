@@ -20,5 +20,8 @@ public class Main {
         System.out.println("\nThank you for purchasing " + product.getBrand() + " " + product.getClass().getSimpleName()+ ". Your total comes to "
                 + product.getPrice());
                 product.fold();
+
+                // Le due diverse configurazioni del metodo astratto wear (quella sovrascritta in Shirt e quella sovrascritta in Pants) dipendono dalla forma che prende il parametro product.
+                product.wear();
     }
 }
