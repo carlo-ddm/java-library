@@ -18,7 +18,7 @@ public class Lab {
         this.labEquipments.add(labEquipment.clone());
     }
 
-    public void setLabEquipments(int index, LabEquipment labEquipment) {
+    public void setLabEquipment(LabEquipment labEquipment, int index) {
         this.labEquipments.set(index, labEquipment.clone());
     }
     
