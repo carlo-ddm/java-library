@@ -18,7 +18,13 @@ public class Main {
         );
 
         students.stream()
+        .filter(student -> {
+            double score = student.getScore();
+            return score > 80;
+        })
             //intermediate operation goes here
-           .forEach(null); // terminal operation
+           .forEach(student -> {
+            System.out.println("Congratulations " + student.getName() + " for achieving a score of " + student.getScore());
+           }); // terminal operation
     }
 }

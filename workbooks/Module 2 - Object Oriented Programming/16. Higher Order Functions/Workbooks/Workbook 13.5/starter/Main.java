@@ -2,6 +2,7 @@ import java.util.Arrays;
 import java.util.List;
 
 public class Main {
+    public static final String ROMANCE = "Romance";
     public static void main(String[] args) {
         List<Book> books = Arrays.asList(
             new Book("The Alchemist", "Fantasy", 1988, 15.42),
@@ -23,7 +24,20 @@ public class Main {
 
         System.out.println("\nThese books are on sale\n-----------------------");
         books.stream()
+            .filter(book -> {
+                String genre = book.getGenre();
+                return genre.equals(ROMANCE);
+            })
+            .map(book -> {
+                double price = book.getPrice();
+                double discount = (price * 50) / 100;
+                book.setPrice(price - discount);
+                return book;
+            })
+            .sorted((right, left) -> {
+                return right.getYear().compareTo(left.getYear());
+            })
             // intermediate operations go here...
-            .forEach(null); // terminal operation
+            .forEach(book -> System.out.println(book)); // terminal operation
     }
 }
